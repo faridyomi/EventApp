@@ -15,6 +15,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import EventItem from './eventItem';
+import ActionButton from 'react-native-action-button';
+import {Icon} from 'react-native-elements';
 
 const eventsList = [
   {
@@ -43,9 +45,16 @@ const App = () => {
       <SafeAreaView>
         <FlatList
           data={eventsList}
-          renderItem={({item}) => <EventItem value={item}/>}
+          renderItem={({item}) => <EventItem data={item}/>}
           keyExtractor={(item) => item.id}
         />
+        <ActionButton buttonColor="#AD6C23" >
+          <Icon
+              name='chat'
+              type='evilicon'
+              color="#FFF"
+          />
+        </ActionButton>
       </SafeAreaView>
     </View>
   );

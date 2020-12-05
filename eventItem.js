@@ -3,8 +3,16 @@ import {StyleSheet, View, Text, Image} from 'react-native';
 import { Icon } from 'react-native-elements';
 
 class EventItem extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log(props);
+        this.state = {
+            activeItem: props
+        }
+        console.log(this.state.activeItem);
+    }
   render() {
-    const event = this.props.event
+    const event = this.state.activeItem;
     return (
       <View style={styles.mainContainer}>
         <View style={styles.viewLines}>
