@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
   body: {
     backgroundColor: Colors.black,
     color:Colors.white,
+    flex:1,
   },
 });
 
